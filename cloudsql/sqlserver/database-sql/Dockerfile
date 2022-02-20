@@ -47,7 +47,7 @@ COPY ./templates /app/templates
 COPY ./certs /app/certs
 
 # Use server certificate for encrypted connection.
-COPY ./certs/server-ca.pem /usr/local/share/ca-certificates/server-ca.crt
+# COPY ./certs/server-ca.pem /usr/local/share/ca-certificates/server-ca.crt
 RUN update-ca-certificates
 
 # Run the web service on container startup.
