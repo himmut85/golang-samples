@@ -245,7 +245,7 @@ func initTCPConnectionPool() (*sql.DB, error) {
 	// For deployments that connect directly to a Cloud SQL instance without
 	// using the Cloud SQL Proxy, configuring SSL certificates will ensure the
 	// connection is encrypted. This step is entirely OPTIONAL.
-	dbRootCert := os.Getenv("DB_ROOT_CERT") // e.g., '/path/to/my/server-ca.pem'
+	/*dbRootCert := os.Getenv("DB_ROOT_CERT") // e.g., '/path/to/my/server-ca.pem'
 	if dbRootCert != "" {
 		// Get connection host name to be matched with host name in SSL certificate.
 		var instanceConnectionName = mustGetenv("INSTANCE_CONNECTION_NAME")
@@ -260,6 +260,7 @@ func initTCPConnectionPool() (*sql.DB, error) {
 	}
 	// [END cloud_sql_sqlserver_databasesql_sslcerts]
 	// [END_EXCLUDE]
+	*/
 
 	// dbPool is the pool of database connections.
 	dbPool, err := sql.Open("mssql", dbURI)
