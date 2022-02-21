@@ -116,9 +116,11 @@ func newApp() *app {
 	}
 
 	// Drop the votes table if it already exists.
+	/*
 	if _, err = app.db.Exec(`DROP TABLE IF EXISTS votes;`); err != nil {
 		log.Fatalf("DB.Exec: unable to drop votes table: %s", err)
 	}
+	*/
 	// Create the votes table.
 	_, err = app.db.Exec(`CREATE TABLE votes
 	( vote_id int IDENTITY(1,1) PRIMARY KEY, time_cast DATETIME NOT NULL,
