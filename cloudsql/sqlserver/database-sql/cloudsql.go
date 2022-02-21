@@ -232,7 +232,7 @@ func initTCPConnectionPool() (*sql.DB, error) {
 	var (
 		dbUser    = "testuser" // e.g. 'my-db-user'
 		dbPwd     = "test123" // e.g. 'my-db-password'
-		dbTCPHost = "10.132.0.43" // e.g. '127.0.0.1' ('172.17.0.1' if deployed to GAE Flex)
+		dbTCPHost = "10.0.0.3" // e.g. '127.0.0.1' ('172.17.0.1' if deployed to GAE Flex)
 		dbPort    = "1433" // e.g. '1433'
 		dbName    = "TESTDB" // e.g. 'my-database'
 	)
